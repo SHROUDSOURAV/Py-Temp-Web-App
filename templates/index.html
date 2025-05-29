@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Weather Temperature</title>
+    <!-- the link is written as per the flask requirement -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <!-- page where the user lands to input the city name -->
+    <h1>Get Weather Temperature</h1>
+    <form action="/weather">
+        <input type="text" name="city" id="city" placeholder="Enter the city">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

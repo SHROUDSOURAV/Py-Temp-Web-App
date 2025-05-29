@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}Weather</title>
+    <!-- the link is written as per the flask requirement -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <!-- page where the user lands after submitting their city name -->
+    <!-- 
+    title
+    status 
+    temp
+    feels_like
+    are 4 varaibles from the server.py whose values are displayed in weather.html
+    -->
+    <h1>{{ title }}Weather</h1>
+    <p>{{ status }} and {{ temp }} &deg;</p>
+    <p>Feels like {{ feels_like }} &deg;</p>
+
+    <form action="/weather">
+        <input type="text" name="city" id="city" placeholder="Enter the city">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
